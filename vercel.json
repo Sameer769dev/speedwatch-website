@@ -1,10 +1,5 @@
 {
-  "rewrites": [
-    { "source": "/", "destination": "/index.html" },
-    { "source": "/privacy", "destination": "/privacy.html" },
-    { "source": "/terms", "destination": "/terms.html" },
-    { "source": "/app-ads.txt", "destination": "/app-ads.txt" }
-  ],
+  "cleanUrls": true,
   "headers": [
     {
       "source": "/app-ads.txt",
