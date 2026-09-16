@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Detect ISP Throttling: Stop Secret Speed Caps (2026 Guide)</title>
+  <meta name="description"
+    content="Is your Internet Service Provider secretly throttling your connection during peak hours or video streaming? Learn technical methods to prove ISP throttling and reclaim bandwidth." />
+  <link rel="canonical" href="https://speedwatch-app.vercel.app/blog/how-to-detect-isp-throttling.html" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How to Detect ISP Throttling: Stop Secret Speed Caps (2026 Guide)" />
+  <meta property="og:description"
+    content="Learn how to detect selective protocol throttling, port shaping, and peak-hour bandwidth manipulation with verifiable speed tests." />
+  <meta property="og:image" content="https://speedwatch-app.vercel.app/assets/icon.png" />
+  <meta property="og:url" content="https://speedwatch-app.vercel.app/blog/how-to-detect-isp-throttling.html" />
+
+  <link rel="icon" href="../assets/icon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+
+  <!-- Article JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Detect ISP Throttling: Stop Secret Speed Caps",
+    "description": "Step-by-step diagnostic guide to detecting whether your ISP is throttling video streaming, gaming, or general bandwidth during peak hours.",
+    "image": "https://speedwatch-app.vercel.app/assets/icon.png",
+    "datePublished": "2026-09-16",
+    "dateModified": "2026-09-16",
+    "author": {
+      "@type": "Organization",
+      "name": "SpeedWatch Labs"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SpeedWatch",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://speedwatch-app.vercel.app/assets/icon.png"
+      }
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand">
+        <img src="../assets/icon.png" alt="SpeedWatch logo" class="nav-logo" />
+        <span class="nav-wordmark">SpeedWatch</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#speedtest">Speed Test</a></li>
+        <li><a href="/#features">Features</a></li>
+        <li><a href="/blog/" style="color: var(--cyan);">Blog &amp; Guides</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+      <a href="https://play.google.com/store/apps/details?id=com.speedwatch.app" class="btn-nav-cta" target="_blank" rel="noopener">
+        Get on Play Store
+      </a>
+    </div>
+  </nav>
+
+  <!-- ===== AD SLOT ===== -->
+  <div class="container" style="padding-top: calc(var(--nav-h) + 16px);">
+    <div class="ad-slot-container">
+      <div class="ad-label">Advertisement</div>
+      <div class="ad-box ad-leaderboard">
+        <span>Sponsored Ad Placement Space</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ARTICLE CONTAINER ===== -->
+  <main class="container">
+    <article>
+      <header class="article-header">
+        <span class="blog-card-tag">ISP Analysis</span>
+        <h1 style="font-size: clamp(2rem, 4.5vw, 3.1rem); font-weight: 800; line-height: 1.2; margin: 16px 0 12px;">
+          How to Detect ISP Throttling: Step-by-Step Diagnostic Guide
+        </h1>
+        <div style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 24px;">
+          Published by <strong>SpeedWatch Labs</strong> · Updated September 16, 2026 · 7 min read
+        </div>
+      </header>
+
+      <div class="article-content">
+        <p>
+          You pay for a 300 Mbps or gigabit fiber plan, but at 8:30 PM, your 4K Netflix video buffers into blurry 480p pixelation. Downloads stall, and your online gaming session spikes with rubber-banding lag.
+        </p>
+        <p>
+          Is your local Wi-Fi just congested, or is your <strong>Internet Service Provider (ISP) actively throttling your connection</strong>? In this guide, we break down how ISPs shape traffic, how to test for it with verifiable technical methods, and how to gather proof.
+        </p>
+
+        <h2>What is ISP Throttling?</h2>
+        <p>
+          ISP throttling occurs when your internet provider intentionally restricts your incoming or outgoing bandwidth. Providers utilize Deep Packet Inspection (DPI) and traffic-shaping routers to limit speeds under three main scenarios:
+        </p>
+        <ul>
+          <li><strong>Content/Service Throttling:</strong> Throttling specific types of data, such as YouTube, Netflix, Twitch, or P2P torrent protocols, while leaving general speed test sites unrestricted.</li>
+          <li><strong>Peak Hour Congestion Throttling:</strong> Limiting all neighborhood subscribers between 7:00 PM and 11:00 PM because their regional fiber backhaul is oversold and under-provisioned.</li>
+          <li><strong>Data Cap Caps / "Fair Usage" Deprioritization:</strong> Lowering your speed from 500 Mbps down to 5 Mbps once you cross an arbitrary monthly data threshold (e.g., 1.2 TB).</li>
+        </ul>
+
+        <h2>Method 1: The VPN Speed Discrepancy Test</h2>
+        <p>
+          The most reliable benchmark to expose content-based throttling is the <strong>Encrypted VPN Differential Test</strong>.
+        </p>
+        <ol>
+          <li>Run a raw multi-stream test using our <a href="/#speedtest" style="color: var(--cyan); text-decoration: underline;">in-browser speed test engine</a> on your standard connection. Record download and upload values.</li>
+          <li>Stream a 4K 60fps video on YouTube or Vimeo and measure whether it buffers or drops frames (enable "Stats for nerds").</li>
+          <li>Now, turn on a trusted, high-performance encrypted VPN (WireGuard or OpenVPN protocol).</li>
+          <li>Test the stream and video again.</li>
+        </ol>
+        <p>
+          <strong>The Verdict:</strong> Under normal conditions, a VPN slightly decreases speeds due to encryption overhead (5–10%). However, if your video streams smoothly or download speeds <em>increase significantly</em> while on VPN, <strong>your ISP is caught red-handed throttling unencrypted traffic</strong>. When encrypted, the ISP cannot inspect packet headers and therefore cannot selectively throttle.
+        </p>
+
+        <div class="article-callout">
+          <h4 style="color: #fff; margin-bottom: 8px;">Automate 24/7 ISP Audit Logs with SpeedWatch</h4>
+          <p style="margin-bottom: 14px;">
+            ISPs will claim "intermittent local Wi-Fi issues" unless you have time-stamped proof. The <strong>SpeedWatch Android app</strong> automatically runs periodic background speed tests, logs latency spikes, and outputs an official SLA audit certificate.
+          </p>
+          <a href="https://play.google.com/store/apps/details?id=com.speedwatch.app" class="btn-primary" target="_blank" rel="noopener" style="display: inline-block;">
+            Download SpeedWatch App on Google Play →
+          </a>
+        </div>
+
+        <h2>Method 2: Multi-Port and Protocol Shaper Tests</h2>
+        <p>
+          Some aggressive ISPs throttle specific network ports commonly associated with high data consumption (such as BitTorrent port ranges 6881–6889 or Usenet port 119).
+        </p>
+        <p>
+          Using diagnostic tools like <em>Glasnost</em> or custom iPerf3 servers listening on port 80 (standard HTTP) versus port 443 (HTTPS) versus non-standard ports can expose port-targeted queue deprioritization.
+        </p>
+
+        <h2>Method 3: Timestamped Time-of-Day Comparison</h2>
+        <p>
+          If your speed test is 450 Mbps at 10:00 AM on Tuesday, but plummets to 28 Mbps every weekday evening at 8:15 PM, you are subject to automated peak-hour throttling or severe node oversaturation.
+        </p>
+        <ul>
+          <li>Log your speed at 9:00 AM, 2:00 PM, 8:30 PM, and 1:00 AM for 7 consecutive days.</li>
+          <li>Check your contract's Service Level Agreement (SLA) or "Committed Information Rate" (CIR).</li>
+          <li>If the speed consistently drops below 50% of your advertised tier during prime time, you have legal grounds for contract termination or service credits.</li>
+        </ul>
+
+        <h2>What Can You Do If Your ISP is Throttling You?</h2>
+        <ol>
+          <li><strong>Keep a VPN Enabled:</strong> Route sensitive traffic through an encrypted WireGuard tunnel to prevent Deep Packet Inspection.</li>
+          <li><strong>Submit an Official SpeedWatch Audit Report:</strong> Present documented speed and latency graphs to tier-2 customer support.</li>
+          <li><strong>File an FCC / Regulatory Complaint:</strong> In many jurisdictions, misleading speed advertising violates consumer protection statutes when advertised speeds are systematically throttled.</li>
+          <li><strong>Switch to a Dedicated Symmetrical Fiber Provider:</strong> Unlike legacy DOCSIS cable networks that share coaxial bandwidth with your entire block, dedicated GPON/XGS-PON fiber offers unshared, unthrottled throughput.</li>
+        </ol>
+      </div>
+
+      <!-- Article Bottom Conversion Banner -->
+      <div class="app-conversion-box" style="margin: 40px auto 80px;">
+        <div class="app-conversion-content">
+          <h4>Hold Your Internet Provider Accountable</h4>
+          <p>
+            Never let your ISP charge you for gigabit speeds while delivering dial-up performance. SpeedWatch for Android gives you instant status bar visibility and historical dispute exports.
+          </p>
+        </div>
+        <div class="app-conversion-cta">
+          <a href="https://play.google.com/store/apps/details?id=com.speedwatch.app" class="btn-primary" target="_blank" rel="noopener">
+            Get Free on Google Play →
+          </a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="../assets/icon.png" alt="SpeedWatch logo" style="width: 32px; height: 32px;" />
+        <span class="nav-wordmark">SpeedWatch</span>
+      </div>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/#speedtest">Speed Test</a>
+        <a href="/blog/">Blog</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 SpeedWatch. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

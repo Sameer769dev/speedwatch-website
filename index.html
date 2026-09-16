@@ -1,38 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SpeedWatch – Real-Time Network Performance Monitor for Android</title>
-  <meta name="description" content="SpeedWatch is a state-of-the-art Android app for real-time speed testing, ISP throttle detection, bufferbloat analysis, DNS audits, and historical analytics. Download free on Google Play." />
-  <meta name="keywords" content="speed test android, network monitor, ISP throttle detection, bufferbloat, DNS audit, SpeedWatch, WiFi speed test" />
-  <meta property="og:title" content="SpeedWatch – Network Performance Monitor" />
-  <meta property="og:description" content="Real-time speed testing, ISP throttle detection, bufferbloat analysis, and more. Free on Google Play." />
+  
+  <!-- Primary Meta Tags -->
+  <title>SpeedWatch – Free Internet Speed Test &amp; 24/7 Network Monitor</title>
+  <meta name="title" content="SpeedWatch – Free Internet Speed Test &amp; 24/7 Network Monitor" />
+  <meta name="description"
+    content="Test your real internet download, upload, ping, jitter, and bufferbloat in seconds. Benchmark Wi-Fi, 5G, and broadband speeds, detect ISP throttling, and export certified SLA dispute PDF reports. Free on Android." />
+  <meta name="keywords"
+    content="internet speed test, speed test, wifi speed test, broadband speed test, ookla speedtest alternative, bufferbloat test, isp throttle test, 5g speed test, ping test, network monitor android, speedwatch" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="https://speedwatch-app.vercel.app/" />
+  <meta name="author" content="SpeedWatch Team" />
+  <meta name="theme-color" content="#050A14" />
+
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/icon.png" />
+  <meta property="og:url" content="https://speedwatch-app.vercel.app/" />
+  <meta property="og:title" content="SpeedWatch – Free Internet Speed Test &amp; 24/7 Network Monitor" />
+  <meta property="og:description"
+    content="Accurately test download, upload, ping, and bufferbloat in seconds. Discover if your ISP is delivering promised speeds." />
+  <meta property="og:image" content="https://speedwatch-app.vercel.app/assets/icon.png" />
+  <meta property="og:site_name" content="SpeedWatch" />
+
+  <!-- Twitter / X -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://speedwatch-app.vercel.app/" />
+  <meta property="twitter:title" content="SpeedWatch – Free Internet Speed Test &amp; 24/7 Network Monitor" />
+  <meta property="twitter:description"
+    content="Test your real internet speed in seconds. Detect ISP throttling, measure bufferbloat, and monitor 24/7 in your status bar." />
+  <meta property="twitter:image" content="https://speedwatch-app.vercel.app/assets/icon.png" />
+
+  <!-- Icons & Fonts -->
   <link rel="icon" href="assets/icon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- JSON-LD Structured Data Schemas for Google Search Console -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://speedwatch-app.vercel.app/#webapp",
+        "url": "https://speedwatch-app.vercel.app/",
+        "name": "SpeedWatch Online Internet Speed Test",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires HTML5 and JavaScript support",
+        "description": "Professional in-browser broadband speed test calculating download speed, upload speed, latency ping, and jitter over edge servers.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://speedwatch-app.vercel.app/#androidapp",
+        "name": "SpeedWatch – Network Performance Monitor",
+        "operatingSystem": "Android 8.0 and up",
+        "applicationCategory": "UtilitiesApplication",
+        "downloadUrl": "https://play.google.com/store/apps/details?id=com.speedwatch.app",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "ratingCount": "1280"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://speedwatch-app.vercel.app/#organization",
+        "name": "SpeedWatch",
+        "url": "https://speedwatch-app.vercel.app/",
+        "logo": "https://speedwatch-app.vercel.app/assets/icon.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "cartoonworld7sb@gmail.com",
+          "contactType": "customer support"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://speedwatch-app.vercel.app/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How accurate is the SpeedWatch web speed test?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SpeedWatch measures raw HTTP chunk throughput directly against high-capacity global CDN edge servers without proxy compression, accurately measuring latency, download speed, and upload throughput matching real-world browsing, streaming, and gaming conditions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I know if my ISP is throttling my internet speed?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ISP throttling commonly occurs during peak evening hours or on specific traffic types like video streaming and gaming. If your speed drops significantly below your contracted plan tier or fluctuates heavily, run diagnostic tests across different hours. The SpeedWatch Android app automates this with 24/7 background audits and official legal PDF dispute certificates."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is bufferbloat and how does it affect online gaming?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bufferbloat occurs when your router queues excessive packets during active downloads or uploads, causing severe latency spikes (lag). Even with 500 Mbps download, high bufferbloat creates rubber-banding in competitive games and frozen video on Zoom calls."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is Wi-Fi speed slower than a wired Ethernet connection?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Wi-Fi is subject to radio frequency interference from neighboring routers, physical wall attenuation, and protocol overhead. Ethernet provides a dedicated full-duplex shielded copper connection, typically delivering 20% to 50% faster real throughput with near-zero packet loss."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What internet speed do I need for 4K streaming and gaming?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A single 4K HDR video stream requires 25 Mbps continuous bandwidth. For households with multiple screens, smart TVs, and remote workers, 100–300 Mbps is recommended. For gaming, ping latency under 30 ms and jitter under 3 ms matter much more than raw download speed."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use SpeedWatch audit reports to dispute my ISP bill?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! The SpeedWatch Android app generates court-ready, timestamped, verified PDF SLA audit certificates proving contracted speed breaches, which users successfully submit to ISPs (Comcast, Spectrum, AT&T, Verizon) and regulatory bodies to claim monthly bill credits."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
+
 <body>
 
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
-      <a href="#" class="nav-brand" aria-label="SpeedWatch Home">
+      <a href="/" class="nav-brand" aria-label="SpeedWatch Home">
         <img src="assets/icon.png" alt="SpeedWatch logo" class="nav-logo" />
         <span class="nav-wordmark">SpeedWatch</span>
       </a>
       <ul class="nav-links" role="navigation" aria-label="Main navigation">
+        <li><a href="#speedtest" id="nav-speedtest">Speed Test</a></li>
         <li><a href="#features" id="nav-features">Features</a></li>
-        <li><a href="#lab" id="nav-lab">Lab Tests</a></li>
-        <li><a href="#premium" id="nav-premium">Pro</a></li>
-        <li><a href="#privacy" id="nav-privacy">Privacy</a></li>
+        <li><a href="#lab" id="nav-lab">Lab Audits</a></li>
+        <li><a href="/blog/" id="nav-blog">Blog &amp; Guides</a></li>
+        <li><a href="#faq" id="nav-faq">FAQ</a></li>
+        <li><a href="about.html" id="nav-about">About</a></li>
       </ul>
-      <a href="https://play.google.com/store/apps/details?id=com.speedwatch.app" class="btn-nav-cta" id="nav-cta" target="_blank" rel="noopener">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 20.5v-17c0-.83 1-1.3 1.6-.78l14 8.5c.53.32.53 1.04 0 1.36l-14 8.5c-.6.52-1.6.05-1.6-.78z"/></svg>
+      <a href="https://play.google.com/store/apps/details?id=com.speedwatch.app" class="btn-nav-cta" id="nav-cta"
+        target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M3 20.5v-17c0-.83 1-1.3 1.6-.78l14 8.5c.53.32.53 1.04 0 1.36l-14 8.5c-.6.52-1.6.05-1.6-.78z" />
+        </svg>
         Get on Play Store
       </a>
       <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
@@ -40,512 +182,541 @@
       </button>
     </div>
     <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <a href="#speedtest">Speed Test</a>
       <a href="#features">Features</a>
-      <a href="#lab">Lab Tests</a>
-      <a href="#premium">Pro</a>
-      <a href="#privacy">Privacy</a>
-      <a href="https://play.google.com/store/apps/details?id=com.speedwatch.app" target="_blank" rel="noopener" class="mobile-cta">Get on Play Store</a>
+      <a href="#lab">Lab Audits</a>
+      <a href="/blog/">Blog &amp; Guides</a>
+      <a href="#faq">FAQ</a>
+      <a href="about.html">About SpeedWatch</a>
+      <a href="contact.html">Contact &amp; Support</a>
+      <a href="https://play.google.com/store/apps/details?id=com.speedwatch.app" target="_blank" rel="noopener"
+        class="mobile-cta">Download Android App</a>
     </div>
   </nav>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero" id="hero" aria-labelledby="hero-heading">
-    <div class="hero-bg-orbs" aria-hidden="true">
-      <div class="orb orb-1"></div>
-      <div class="orb orb-2"></div>
-      <div class="orb orb-3"></div>
+  <!-- ===== ADSENSE LEADERBOARD (TOP) ===== -->
+  <div class="container" style="padding-top: calc(var(--nav-h) + 16px);">
+    <div class="ad-slot-container">
+      <div class="ad-label">Advertisement</div>
+      <div class="ad-box ad-leaderboard" id="ad-top-leaderboard">
+        <!-- Google AdSense Ad Slot (Responsive Leaderboard 728x90) -->
+        <span>Sponsored Ad Placement Space</span>
+      </div>
     </div>
-    <div class="hero-grid-lines" aria-hidden="true"></div>
+  </div>
 
-    <div class="container hero-inner">
-      <div class="hero-text">
-        <div class="hero-badge">
-          <span class="badge-dot"></span>
-          Network Performance Monitor
-        </div>
-        <h1 id="hero-heading">
-          Know Your True<br/>
-          <span class="gradient-text">Internet Speed</span>
+  <!-- ===== SPEEDTEST.NET-STYLE HERO INTERACTIVE ENGINE ===== -->
+  <section class="speedtest-section" id="speedtest" aria-labelledby="speedtest-title">
+    <div class="container speedtest-arena">
+
+      <header class="speedtest-header">
+        <h1 id="speedtest-title" style="margin-bottom: 8px;">
+          Real-Time <span class="gradient-text">Internet Speed Test</span>
         </h1>
-        <p class="hero-sub">
-          SpeedWatch measures download, upload, latency &amp; jitter in real time — then goes deeper with ISP throttle detection, bufferbloat analysis, and DNS audits. Built for Android with Jetpack Compose.
+        <p style="color: var(--text-secondary); max-width: 620px; margin: 0 auto 28px; font-size: 0.98rem;">
+          Accurate multi-stream throughput benchmark measuring real download, upload, ping latency, and jitter.
         </p>
-        <div class="hero-actions">
-          <a href="https://play.google.com/store/apps/details?id=com.speedwatch.app"
-             id="hero-play-btn"
-             class="btn-primary"
-             target="_blank" rel="noopener"
-             aria-label="Download SpeedWatch on Google Play">
-            <img src="assets/google-play-badge.svg" alt="Get it on Google Play" class="play-badge" />
+      </header>
+
+      <!-- Top Primary 3-Metrics Display (Speedtest.net style) -->
+      <div class="speedtest-top-metrics">
+        <!-- Ping & Jitter Card -->
+        <div class="metric-card" id="metric-ping-card">
+          <div class="metric-card-label">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+            PING
+          </div>
+          <div class="metric-card-val"><span id="ping-value">--</span> <small class="metric-unit">ms</small></div>
+          <div class="metric-card-sub">Jitter <strong id="jitter-value">-- ms</strong></div>
+        </div>
+
+        <!-- Download Card -->
+        <div class="metric-card" id="metric-download-card">
+          <div class="metric-card-label">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="2">
+              <path d="M12 5v14M19 12l-7 7-7-7"/>
+            </svg>
+            DOWNLOAD
+          </div>
+          <div class="metric-card-val" style="color: #00E5FF;"><span id="download-value">--</span> <small class="metric-unit">Mbps</small></div>
+          <div class="metric-progress-line"><div class="metric-progress-fill" id="dl-progress-fill"></div></div>
+        </div>
+
+        <!-- Upload Card -->
+        <div class="metric-card" id="metric-upload-card">
+          <div class="metric-card-label">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2">
+              <path d="M12 19V5M5 12l7-7 7 7"/>
+            </svg>
+            UPLOAD
+          </div>
+          <div class="metric-card-val" style="color: #10B981;"><span id="upload-value">--</span> <small class="metric-unit">Mbps</small></div>
+          <div class="metric-progress-line"><div class="metric-progress-fill" id="ul-progress-fill"></div></div>
+        </div>
+      </div>
+
+      <!-- Central Speedometer Gauge (Speedtest.net style) -->
+      <div class="gauge-wrapper" id="speedtest-container">
+        <svg class="gauge-svg" viewBox="0 0 400 400" aria-hidden="true">
+          <defs>
+            <linearGradient id="cyan-indigo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#6366F1" />
+              <stop offset="50%" stop-color="#00E5FF" />
+              <stop offset="100%" stop-color="#10B981" />
+            </linearGradient>
+            <linearGradient id="needle-gradient" x1="0%" y1="100%" x2="0%" y2="0%">
+              <stop offset="0%" stop-color="rgba(0, 229, 255, 0.2)" />
+              <stop offset="70%" stop-color="#00E5FF" />
+              <stop offset="100%" stop-color="#FFFFFF" />
+            </linearGradient>
+            <filter id="needle-glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+
+          <!-- Outer Glow Track -->
+          <circle class="gauge-outer-ring" cx="200" cy="200" r="176" />
+
+          <!-- Background 270-deg Track (Arc: 706.86, Gap: 235.62, Radius: 150) -->
+          <circle class="gauge-track" cx="200" cy="200" r="150"
+            stroke-dasharray="706.86 235.62"
+            stroke-dashoffset="0"
+            transform="rotate(135 200 200)" />
+
+          <!-- Dynamic Active Arc (Circumference: 942.48) -->
+          <circle class="gauge-arc" id="gauge-arc" cx="200" cy="200" r="150"
+            stroke-dasharray="942.48"
+            stroke-dashoffset="942.48"
+            transform="rotate(135 200 200)" />
+
+          <!-- Dial Tick Lines & Numbers (Non-linear Scale) -->
+          <g class="gauge-ticks">
+            <line x1="103.8" y1="296.2" x2="96.8" y2="303.2" class="gauge-tick-line" />
+            <line x1="91.2" y1="281.7" x2="83.2" y2="287.7" class="gauge-tick-line" />
+            <line x1="64.4" y1="210.7" x2="54.5" y2="211.5" class="gauge-tick-line" />
+            <line x1="65.7" y1="178.7" x2="55.8" y2="177.2" class="gauge-tick-line" />
+            <line x1="111.7" y1="96.6" x2="105.2" y2="89.0" class="gauge-tick-line" />
+            <line x1="158.0" y1="70.7" x2="154.9" y2="61.1" class="gauge-tick-line" />
+            <line x1="261.7" y1="78.8" x2="266.3" y2="69.9" class="gauge-tick-line" />
+            <line x1="310.0" y1="120.1" x2="318.1" y2="114.2" class="gauge-tick-line" />
+            <line x1="334.3" y1="178.7" x2="344.2" y2="177.2" class="gauge-tick-line" />
+            <line x1="335.1" y1="215.2" x2="345.1" y2="216.3" class="gauge-tick-line" />
+            <line x1="322.5" y1="259.0" x2="331.5" y2="263.3" class="gauge-tick-line" />
+            <line x1="296.2" y1="296.2" x2="303.2" y2="303.2" class="gauge-tick-line" />
+            <text x="116.6" y="283.4">0</text>
+            <text x="82.4" y="209.3">5</text>
+            <text x="123.4" y="110.3">25</text>
+            <text x="253.6" y="94.9">100</text>
+            <text x="316.5" y="181.5">300</text>
+            <text x="317.3" y="213.2">500</text>
+            <text x="283.4" y="283.4">1G</text>
+          </g>
+
+          <!-- Needle Indicator -->
+          <g class="gauge-needle" id="gauge-needle">
+            <polygon points="196,200 204,200 201,66 199,66" fill="url(#needle-gradient)" filter="url(#needle-glow)" />
+            <circle cx="200" cy="66" r="3.5" fill="#FFFFFF" />
+            <circle cx="200" cy="200" r="16" class="gauge-hub" />
+            <circle cx="200" cy="200" r="6" fill="#00E5FF" />
+          </g>
+        </svg>
+
+        <!-- Center Interactive "GO" Button (Idle State) -->
+        <button class="btn-speedtest-go" id="speedtest-start-btn" aria-label="Start Speed Test">
+          <span class="go-pulse-ring"></span>
+          <span class="go-text">GO</span>
+        </button>
+
+        <!-- Central Digital Readout (Testing State) -->
+        <div class="gauge-center-readout" id="gauge-readout">
+          <span class="gauge-digital-speed" id="live-speed-value">0.0</span>
+          <span class="gauge-digital-unit" id="live-speed-unit">Mbps</span>
+          <div class="test-phase-badge" id="test-phase-label">Ready</div>
+        </div>
+      </div>
+
+      <!-- Real-Time Sparkline Waveform Canvas -->
+      <div class="sparkline-container">
+        <canvas id="speed-sparkline-canvas" width="480" height="56"></canvas>
+      </div>
+
+      <!-- Telemetry Info Bar (Client ISP, Server, IP) -->
+      <div class="speedtest-telemetry-bar">
+        <div class="telemetry-item">
+          <span class="telemetry-dot"></span>
+          <span>ISP: <strong id="isp-name-value">Detecting Network...</strong></span>
+        </div>
+        <div class="telemetry-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span>Server: <strong id="server-location-value">Global Edge Network</strong></span>
+        </div>
+        <div class="telemetry-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+            <line x1="6" y1="6" x2="6.01" y2="6"/>
+            <line x1="6" y1="18" x2="6.01" y2="18"/>
+          </svg>
+          <span>IP: <strong id="client-ip-value">Detecting...</strong></span>
+        </div>
+      </div>
+
+      <!-- Test Completed Results Summary Card -->
+      <div class="speedtest-results-card is-hidden" id="speedtest-results-card">
+        <div class="result-card-header">
+          <div>
+            <div class="result-card-title">Network Audit Summary</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Measured against Cloudflare Global Edge</div>
+          </div>
+          <div class="result-grade-badge" id="result-grade-badge">
+            <span class="badge-grade">A+</span>
+            <span class="badge-label">Broadband Certified</span>
+          </div>
+        </div>
+
+        <!-- Results Metrics Breakdown Grid -->
+        <div class="result-metrics-summary">
+          <div class="result-metric-item">
+            <span class="result-metric-label">Download</span>
+            <div class="result-metric-value" style="color: #00E5FF;"><strong id="res-download-val">--</strong> <small>Mbps</small></div>
+          </div>
+          <div class="result-metric-item">
+            <span class="result-metric-label">Upload</span>
+            <div class="result-metric-value" style="color: #10B981;"><strong id="res-upload-val">--</strong> <small>Mbps</small></div>
+          </div>
+          <div class="result-metric-item">
+            <span class="result-metric-label">Ping</span>
+            <div class="result-metric-value"><strong id="res-ping-val">--</strong> <small>ms</small></div>
+          </div>
+          <div class="result-metric-item">
+            <span class="result-metric-label">Jitter</span>
+            <div class="result-metric-value"><strong id="res-jitter-val">--</strong> <small>ms</small></div>
+          </div>
+        </div>
+
+        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px;">
+          Your connection was benchmarked with high precision. For persistent 24/7 background auditing and official court-ready SLA breach dispute PDF reports, get the SpeedWatch Android app.
+        </p>
+
+        <div class="result-actions">
+          <button class="btn-primary" id="speedtest-restart-btn">Test Again ↺</button>
+          <button class="btn-ghost" id="speedtest-share-btn">Share Result 🔗</button>
+        </div>
+      </div>
+
+      <!-- Conversion Box: Web Test -> Android App -->
+      <div class="app-conversion-box">
+        <div class="app-conversion-content">
+          <h4>🚀 Want Continuous Speed in Your Android Status Bar?</h4>
+          <p>
+            Download <strong>SpeedWatch for Android</strong>: live status bar speed meter, 24/7 background SLA contract auditing, bufferbloat lag shield, and court-ready PDF dispute certificates.
+          </p>
+        </div>
+        <div class="app-conversion-cta">
+          <a href="https://play.google.com/store/apps/details?id=com.speedwatch.app" target="_blank" rel="noopener"
+            class="btn-primary" aria-label="Get SpeedWatch on Google Play">
+            <img src="assets/google-play-badge.svg" alt="Get it on Google Play" style="height: 44px;" />
           </a>
-          <a href="#features" class="btn-ghost" id="hero-learn-more">Learn More →</a>
-        </div>
-        <div class="hero-stats" role="list">
-          <div class="stat" role="listitem">
-            <span class="stat-value">4</span>
-            <span class="stat-label">Core Metrics</span>
-          </div>
-          <div class="stat-divider" aria-hidden="true"></div>
-          <div class="stat" role="listitem">
-            <span class="stat-value">3</span>
-            <span class="stat-label">Lab Tests</span>
-          </div>
-          <div class="stat-divider" aria-hidden="true"></div>
-          <div class="stat" role="listitem">
-            <span class="stat-value">Free</span>
-            <span class="stat-label">To Download</span>
-          </div>
         </div>
       </div>
 
-      <div class="hero-visual" aria-hidden="true">
-        <div class="phone-mockup">
-          <div class="phone-frame">
-            <div class="phone-screen">
-              <div class="screen-topbar">
-                <span class="screen-title">SpeedWatch</span>
-                <div class="screen-icons">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#7C93FF"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-4H7l5-8v4h4l-5 8z"/></svg>
-                </div>
-              </div>
-              <div class="screen-network-chip">
-                <span class="chip-dot"></span>
-                Connected &amp; Validated · Wi-Fi 5GHz
-              </div>
-
-              <!-- Speedometer SVG -->
-              <div class="speedometer-wrap">
-                <svg class="speedometer-svg" viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <linearGradient id="arcGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stop-color="#6366F1"/>
-                      <stop offset="100%" stop-color="#00E5FF"/>
-                    </linearGradient>
-                    <filter id="glow">
-                      <feGaussianBlur stdDeviation="3" result="blur"/>
-                      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                    </filter>
-                  </defs>
-                  <!-- Background arc -->
-                  <path d="M 24 115 A 76 76 0 1 1 176 115" stroke="#1E2A4A" stroke-width="14" fill="none" stroke-linecap="round"/>
-                  <!-- Speed arc (animated) -->
-                  <path class="speed-arc" d="M 24 115 A 76 76 0 1 1 176 115" stroke="url(#arcGrad)" stroke-width="14" fill="none" stroke-linecap="round" filter="url(#glow)" stroke-dasharray="240" stroke-dashoffset="60"/>
-                  <!-- Needle -->
-                  <line class="needle" x1="100" y1="100" x2="148" y2="44" stroke="#00E5FF" stroke-width="2.5" stroke-linecap="round" filter="url(#glow)"/>
-                  <circle cx="100" cy="100" r="5" fill="#00E5FF" filter="url(#glow)"/>
-                  <!-- Labels -->
-                  <text x="26" y="130" fill="#4B5EAA" font-size="9" text-anchor="middle" font-family="Inter">0</text>
-                  <text x="100" y="22" fill="#4B5EAA" font-size="9" text-anchor="middle" font-family="Inter">50</text>
-                  <text x="174" y="130" fill="#4B5EAA" font-size="9" text-anchor="middle" font-family="Inter">100</text>
-                </svg>
-                <div class="speed-readout">
-                  <span class="speed-value">87.3</span>
-                  <span class="speed-unit">Mbps</span>
-                </div>
-              </div>
-
-              <div class="screen-metrics">
-                <div class="metric-chip">
-                  <span class="metric-label">↓ Download</span>
-                  <span class="metric-val">87.3</span>
-                  <span class="metric-unit">Mbps</span>
-                </div>
-                <div class="metric-chip">
-                  <span class="metric-label">↑ Upload</span>
-                  <span class="metric-val">45.1</span>
-                  <span class="metric-unit">Mbps</span>
-                </div>
-                <div class="metric-chip">
-                  <span class="metric-label">⟳ Ping</span>
-                  <span class="metric-val">12</span>
-                  <span class="metric-unit">ms</span>
-                </div>
-                <div class="metric-chip">
-                  <span class="metric-label">≈ Jitter</span>
-                  <span class="metric-val">3</span>
-                  <span class="metric-unit">ms</span>
-                </div>
-              </div>
-
-              <div class="stability-badge">Stability: Rock Solid 🟢</div>
-
-              <button class="screen-test-btn" aria-label="Start speed test">Start Speed Test</button>
-            </div>
-          </div>
-          <div class="phone-reflection" aria-hidden="true"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="hero-scroll-hint" aria-hidden="true">
-      <span>Scroll to explore</span>
-      <div class="scroll-arrow"></div>
     </div>
   </section>
 
-  <!-- ===== FEATURES ===== -->
-  <section class="section features" id="features" aria-labelledby="features-heading">
+  <!-- ===== MID-CONTENT AD SLOT ===== -->
+  <div class="container">
+    <div class="ad-slot-container">
+      <div class="ad-label">Advertisement</div>
+      <div class="ad-box ad-leaderboard" id="ad-mid-banner">
+        <span>Sponsored Ad Placement Space</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CORE APP FEATURES ===== -->
+  <section class="section" id="features" aria-labelledby="features-heading">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Core Features</span>
-        <h2 id="features-heading">Everything You Need to<br/><span class="gradient-text">Understand Your Network</span></h2>
-        <p class="section-sub">SpeedWatch goes beyond a basic speed test — it gives you real insight into what your internet connection is actually doing.</p>
+        <span class="section-tag">Powerful Diagnostics</span>
+        <h2 id="features-heading">Why SpeedWatch Goes <span class="gradient-text">Far Beyond</span> Simple Tests</h2>
+        <p class="section-sub">
+          Traditional speed tests only measure speed when you open them. SpeedWatch runs 24/7 background audits, continuous status bar telemetry, and official contractual SLA dispute certificates.
+        </p>
       </div>
 
-      <div class="features-grid" role="list">
-
-        <div class="feature-card feature-card--highlight" role="listitem">
-          <div class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="24" cy="24" r="22" stroke="url(#fi1)" stroke-width="2"/>
-              <path d="M8 36 Q24 10 40 22" stroke="url(#fi1)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-              <line x1="24" y1="24" x2="36" y2="14" stroke="#00E5FF" stroke-width="2" stroke-linecap="round"/>
-              <circle cx="24" cy="24" r="3" fill="#00E5FF"/>
-              <defs><linearGradient id="fi1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#00E5FF"/></linearGradient></defs>
+      <div class="features-grid">
+        <div class="feature-card feature-card--highlight">
+          <div class="feature-icon feature-icon--cyan">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-4H7l5-8v4h4l-5 8z" />
             </svg>
           </div>
-          <h3>Live Speed Test</h3>
-          <p>Animated speedometer tracks download and upload in real time. Results include ping, jitter, and a connection stability badge — all in one tap.</p>
-          <ul class="feature-bullets" aria-label="Speed test features">
-            <li>Download &amp; Upload in Mbps</li>
-            <li>Latency (Ping) in ms</li>
-            <li>Jitter measurement</li>
-            <li>Rock Solid → Very Jittery stability grades</li>
-          </ul>
+          <div class="feature-tag">Exclusive Pro Feature</div>
+          <h3>Massive Status Bar Speed Indicator</h3>
+          <p>
+            Displays continuous real-time download and upload speeds directly inside your Android phone's top status bar with zero battery drain. Features auto-scaling horizontal typography readable at a glance in any app.
+          </p>
         </div>
 
-        <div class="feature-card" role="listitem">
-          <div class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="28" width="8" height="14" rx="2" fill="#6366F1"/><rect x="20" y="18" width="8" height="24" rx="2" fill="url(#fi2)"/><rect x="34" y="8" width="8" height="34" rx="2" fill="#00E5FF"/><defs><linearGradient id="fi2" x1="20" y1="18" x2="28" y2="42" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#00E5FF"/></linearGradient></defs></svg>
+        <div class="feature-card">
+          <div class="feature-icon feature-icon--indigo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+              <polyline points="10 9 9 9 8 9" />
+            </svg>
           </div>
-          <h3>Historical Analytics</h3>
-          <p>Every test is stored locally. View trends over time with beautiful charts, filter by date, and export data as CSV or PDF reports.</p>
-          <ul class="feature-bullets">
-            <li>Timeline speed graphs (Vico charts)</li>
-            <li>Filter: Today / Week / All</li>
-            <li>CSV &amp; PDF export</li>
-            <li>Unlimited history with Pro</li>
-          </ul>
+          <h3>Certified Legal SLA Dispute Reports</h3>
+          <p>
+            Generate timestamped, court-ready PDF audit certificates proving your ISP breached contractual minimum speeds. Use official proof to claim monthly rebates.
+          </p>
         </div>
 
-        <div class="feature-card" role="listitem">
-          <div class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48" fill="none"><path d="M24 6L6 16v16l18 10 18-10V16L24 6z" stroke="url(#fi3)" stroke-width="2" fill="none" stroke-linejoin="round"/><path d="M24 6v36M6 16l18 10 18-10" stroke="url(#fi3)" stroke-width="1.5" fill="none"/><defs><linearGradient id="fi3" x1="6" y1="6" x2="42" y2="42" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#00E5FF"/></linearGradient></defs></svg>
+        <div class="feature-card">
+          <div class="feature-icon feature-icon--green">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
           </div>
-          <h3>Network Health Card</h3>
-          <p>Detects Wi-Fi vs Cellular, identifies your band (2.4 GHz / 5 GHz), and validates internet connectivity at a glance — updated every time you open the app.</p>
-          <ul class="feature-bullets">
-            <li>Wi-Fi &amp; Cellular detection</li>
-            <li>Band identification (location-based)</li>
-            <li>Internet validation status</li>
-            <li>SSID &amp; signal details</li>
-          </ul>
+          <h3>Bufferbloat &amp; Gaming Lag Shield</h3>
+          <p>
+            Measure loaded latency spikes that cause stutter in Valorant, Apex, and Zoom meetings. Diagnose router queue buildup and receive step-by-step SQM fixes.
+          </p>
         </div>
 
-        <div class="feature-card" role="listitem">
-          <div class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="url(#fi4)" stroke-width="2"/><path d="M16 24h16M24 16v16" stroke="#00E5FF" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="24" r="4" fill="url(#fi4)"/><defs><linearGradient id="fi4" x1="6" y1="6" x2="42" y2="42" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#00E5FF"/></linearGradient></defs></svg>
+        <div class="feature-card">
+          <div class="feature-icon feature-icon--yellow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" y1="8" x2="12" y2="12" />
+              <line x1="12" y1="16" x2="12.01" y2="16" />
+            </svg>
           </div>
-          <h3>Background Monitoring</h3>
-          <p>Set SpeedWatch to run automatic checks every few hours using WorkManager. Get notified if your speed drops unexpectedly — even when the app is closed.</p>
-          <ul class="feature-bullets">
-            <li>Scheduled background speed checks</li>
-            <li>Push notifications on drops</li>
-            <li>Hourly checks with Pro</li>
-            <li>Data usage cap control (Pro)</li>
-          </ul>
+          <h3>ISP Throttling &amp; Shaping Detection</h3>
+          <p>
+            Detect hidden bandwidth shaping on streaming CDNs (Netflix, YouTube, Prime) and torrent traffic to prove whether your ISP artificially throttles your connection.
+          </p>
         </div>
 
-        <div class="feature-card" role="listitem">
-          <div class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48" fill="none"><path d="M24 4l4 12h12l-10 7 4 12-10-7-10 7 4-12L8 16h12L24 4z" stroke="url(#fi5)" stroke-width="2" fill="none" stroke-linejoin="round"/><defs><linearGradient id="fi5" x1="8" y1="4" x2="40" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#F59E0B"/><stop offset="1" stop-color="#EF4444"/></linearGradient></defs></svg>
+        <div class="feature-card">
+          <div class="feature-icon feature-icon--red">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01" />
+            </svg>
           </div>
-          <h3>ISP Plan Verification</h3>
-          <p>Enter your contracted plan speed on first launch. SpeedWatch compares every test result against it and flags when you're not getting what you're paying for.</p>
-          <ul class="feature-bullets">
-            <li>One-time plan setup</li>
-            <li>Visual "you got X% of plan" indicators</li>
-            <li>Persistent plan speed reference</li>
-          </ul>
+          <h3>Multi-Network Wi-Fi &amp; 5G Profiles</h3>
+          <p>
+            Benchmark home fiber, office Wi-Fi, and 5G cellular independently with customized SLA baselines and automatic SSID detection.
+          </p>
         </div>
 
-        <div class="feature-card" role="listitem">
-          <div class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="14" width="32" height="22" rx="3" stroke="url(#fi6)" stroke-width="2"/><path d="M20 36v6M28 36v6M14 42h20" stroke="url(#fi6)" stroke-width="2" stroke-linecap="round"/><path d="M14 22h6M14 27h20" stroke="#00E5FF" stroke-width="1.5" stroke-linecap="round"/><defs><linearGradient id="fi6" x1="8" y1="14" x2="40" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#00E5FF"/></linearGradient></defs></svg>
+        <div class="feature-card">
+          <div class="feature-icon feature-icon--cyan">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3" />
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+            </svg>
           </div>
-          <h3>PDF &amp; CSV Reports</h3>
-          <p>Export your test history as professional PDF reports or raw CSV data. Perfect for disputing ISP billing or proving speed issues to your provider.</p>
-          <ul class="feature-bullets">
-            <li>Auto-generated PDF reports</li>
-            <li>Raw CSV export for spreadsheets</li>
-            <li>Share via any Android app</li>
-          </ul>
+          <h3>DNS Speed &amp; Security Leak Audit</h3>
+          <p>
+            Benchmark Cloudflare (1.1.1.1), Google (8.8.8.8), Quad9, and local ISP DNS resolvers for lookup resolution speed and privacy leaks.
+          </p>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ===== LAB TESTS ===== -->
-  <section class="section lab" id="lab" aria-labelledby="lab-heading">
-    <div class="lab-bg" aria-hidden="true">
-      <div class="lab-orb lab-orb-1"></div>
-      <div class="lab-orb lab-orb-2"></div>
-    </div>
+  <!-- ===== LATEST BLOG ARTICLES (HIGH-INTENT SEO CONTENT) ===== -->
+  <section class="section" style="background: rgba(11, 17, 32, 0.4);" aria-labelledby="blog-heading">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Technical Lab</span>
-        <h2 id="lab-heading">Advanced Diagnostics<br/><span class="gradient-text">For Power Users</span></h2>
-        <p class="section-sub">The Lab screen runs clinical network tests that expose hidden problems your ISP doesn't want you to find.</p>
+        <span class="section-tag">Knowledge &amp; Technical Guides</span>
+        <h2 id="blog-heading">Master Your <span class="gradient-text">Network Performance</span></h2>
+        <p class="section-sub">
+          Expert broadband guides, router optimization tutorials, and legal advice to get the internet speed you pay for.
+        </p>
       </div>
 
-      <div class="lab-cards" role="list">
-
-        <div class="lab-card" role="listitem" id="lab-throttle">
-          <div class="lab-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 40 40" fill="none"><path d="M6 30 Q20 8 34 18" stroke="url(#lc1)" stroke-width="2.5" stroke-linecap="round" fill="none"/><line x1="20" y1="20" x2="30" y2="12" stroke="#EF4444" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="20" r="3" fill="#EF4444"/><defs><linearGradient id="lc1" x1="6" y1="30" x2="34" y2="8" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#EF4444"/></linearGradient></defs></svg>
-          </div>
-          <div class="lab-card-content">
-            <div class="lab-card-number" aria-hidden="true">01</div>
-            <h3>ISP Throttling Check</h3>
-            <p>Reads the hardware-reported Wi-Fi link speed from your device chip and compares it to the actual measured throughput. A significant gap is a strong signal your ISP is throttling your connection.</p>
-            <div class="lab-results" aria-label="Possible results">
-              <span class="result-badge result--green">Optimal</span>
-              <span class="result-badge result--blue">Hardware Limited</span>
-              <span class="result-badge result--yellow">Suspicious</span>
-              <span class="result-badge result--red">Likely Throttled</span>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-card-body">
+            <span class="blog-card-tag">Speed Guide</span>
+            <h3 class="blog-card-title">
+              <a href="/blog/how-to-test-internet-speed-accurately.html">How to Test Internet Speed Accurately (The Definitive Guide)</a>
+            </h3>
+            <p class="blog-card-excerpt">
+              Learn why speed tests vary, how multi-thread streams work, and the exact steps to eliminate Wi-Fi and browser bottlenecks.
+            </p>
+            <div class="blog-card-meta">
+              <span>8 min read</span>
+              <a href="/blog/how-to-test-internet-speed-accurately.html" style="color: var(--cyan); font-weight: 600;">Read Article →</a>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="lab-card" role="listitem" id="lab-bufferbloat">
-          <div class="lab-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 40 40" fill="none"><rect x="4" y="10" width="32" height="20" rx="3" stroke="url(#lc2)" stroke-width="2"/><path d="M4 20h32" stroke="url(#lc2)" stroke-width="1.5" stroke-dasharray="3 3"/><path d="M12 14 Q20 8 28 14 Q20 20 12 14z" fill="url(#lc2)" opacity="0.5"/><defs><linearGradient id="lc2" x1="4" y1="10" x2="36" y2="30" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#00E5FF"/></linearGradient></defs></svg>
-          </div>
-          <div class="lab-card-content">
-            <div class="lab-card-number" aria-hidden="true">02</div>
-            <h3>Bufferbloat Analysis</h3>
-            <p>Simulates heavy upload/download traffic and measures how much extra latency (the 90th percentile lag spike) is added under load. High bufferbloat causes lag in gaming and video calls even with fast internet.</p>
-            <div class="lab-results" aria-label="Grade results">
-              <span class="result-badge result--green">A+  Excellent</span>
-              <span class="result-badge result--yellow">B  Moderate</span>
-              <span class="result-badge result--red">D  Poor</span>
+        <article class="blog-card">
+          <div class="blog-card-body">
+            <span class="blog-card-tag">ISP Throttling</span>
+            <h3 class="blog-card-title">
+              <a href="/blog/how-to-detect-isp-throttling.html">How to Prove Your ISP Is Throttling You (And Claim Refunds)</a>
+            </h3>
+            <p class="blog-card-excerpt">
+              Is your internet slowing down at night? Here is how to detect bandwidth shaping and generate certified SLA dispute evidence.
+            </p>
+            <div class="blog-card-meta">
+              <span>7 min read</span>
+              <a href="/blog/how-to-detect-isp-throttling.html" style="color: var(--cyan); font-weight: 600;">Read Article →</a>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="lab-card" role="listitem" id="lab-dns">
-          <div class="lab-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="16" stroke="url(#lc3)" stroke-width="2"/><path d="M12 20h16M20 12v16" stroke="#00E5FF" stroke-width="1.5" stroke-linecap="round"/><circle cx="20" cy="20" r="4" fill="none" stroke="url(#lc3)" stroke-width="1.5"/><defs><linearGradient id="lc3" x1="4" y1="4" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#00E5FF"/></linearGradient></defs></svg>
-          </div>
-          <div class="lab-card-content">
-            <div class="lab-card-number" aria-hidden="true">03</div>
-            <h3>DNS Resolution Audit</h3>
-            <p>Fires raw UDP packets to Cloudflare (1.1.1.1) and Google (8.8.8.8) and compares response times against your ISP's default resolver. Recommends the fastest DNS server for faster web browsing.</p>
-            <div class="lab-results" aria-label="DNS servers compared">
-              <span class="result-badge result--blue">Cloudflare 1.1.1.1</span>
-              <span class="result-badge result--blue">Google 8.8.8.8</span>
-              <span class="result-badge result--yellow">System Default</span>
+        <article class="blog-card">
+          <div class="blog-card-body">
+            <span class="blog-card-tag">Gaming &amp; Latency</span>
+            <h3 class="blog-card-title">
+              <a href="/blog/what-is-bufferbloat-how-to-fix.html">What is Bufferbloat? Why Fast Internet Still Lags in Games</a>
+            </h3>
+            <p class="blog-card-excerpt">
+              Discover why high bandwidth connections still experience ping spikes during gaming and Zoom calls, and how SQM fixes it.
+            </p>
+            <div class="blog-card-meta">
+              <span>9 min read</span>
+              <a href="/blog/what-is-bufferbloat-how-to-fix.html" style="color: var(--cyan); font-weight: 600;">Read Article →</a>
             </div>
           </div>
-        </div>
-
+        </article>
       </div>
 
-      <div class="lab-audit-note">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="#4CAF50" aria-hidden="true"><path d="M9 16.17l-4.17-4.17-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
-        Every lab test generates a signed <strong>Audit Certificate</strong> saved to your history — use it as evidence when disputing your ISP.
+      <div style="text-align: center; margin-top: 16px;">
+        <a href="/blog/" class="btn-ghost" style="display: inline-block;">Browse All Guides &amp; Articles →</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== PREMIUM ===== -->
-  <section class="section premium" id="premium" aria-labelledby="premium-heading">
+  <!-- ===== SEARCH CONSOLE HIGH-RANKING FAQ ACCORDION ===== -->
+  <section class="faq-section" id="faq" aria-labelledby="faq-title">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag" style="background: linear-gradient(135deg, #00E5FF22, #3B82F622); color: #00E5FF;">⬦ SpeedWatch Pro</span>
-        <h2 id="premium-heading">Supercharged Pro Plans<br/><span style="background: linear-gradient(135deg, #00E5FF, #3B82F6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Built for Maximum Control</span></h2>
-        <p class="section-sub">Choose the ideal plan for your network monitoring needs. Cancel anytime directly in Google Play.</p>
+        <span class="section-tag">Frequently Asked Questions</span>
+        <h2 id="faq-title">Everything You Need to Know About <span class="gradient-text">Speed Testing</span></h2>
+        <p class="section-sub">
+          Clear answers to common questions about internet speeds, broadband contracts, and latency diagnostics.
+        </p>
       </div>
 
-      <div class="pricing-cards">
-
-        <div class="pricing-card pricing-card--free" id="pricing-free">
-          <div class="pricing-header">
-            <h3>Free</h3>
-            <div class="pricing-price"><span class="price-amount">$0</span></div>
-            <p>Essential network testing</p>
-          </div>
-          <ul class="pricing-features" aria-label="Free tier features">
-            <li class="feature-yes">Real-time speed test</li>
-            <li class="feature-yes">Download, Upload, Ping, Jitter</li>
-            <li class="feature-yes">Basic 10-log history</li>
-            <li class="feature-yes">ISP throttle detection</li>
-            <li class="feature-yes">Bufferbloat &amp; DNS lab tests</li>
-            <li class="feature-no">Live Status Bar Overlay</li>
-            <li class="feature-no">Background speed monitoring</li>
-            <li class="feature-no">100% Ad-free experience</li>
-          </ul>
-          <a href="https://play.google.com/store/apps/details?id=com.speedwatch.app"
-             id="free-download-btn"
-             class="pricing-btn pricing-btn--outline"
-             target="_blank" rel="noopener">Download Free</a>
-        </div>
-
-        <div class="pricing-card pricing-card--pro" id="pricing-pro" style="border: 2px solid #00E5FF;">
-          <div class="pro-popular-badge" style="background: #00E5FF; color: #00363D;">Most Popular</div>
-          <div class="pricing-header">
-            <h3>Yearly Pass</h3>
-            <div class="pricing-price">
-              <span class="price-amount">$19.99</span><span class="price-prefix">/yr</span>
-            </div>
-            <p>Save 60% • Full Pro suite unlocked</p>
-          </div>
-          <ul class="pricing-features" aria-label="Pro tier features">
-            <li class="feature-yes">⚡ Status Bar Live Speed Overlay</li>
-            <li class="feature-yes">⏱ Background SLA drop alerts</li>
-            <li class="feature-yes">📊 Unlimited history &amp; CSV/PDF export</li>
-            <li class="feature-yes">🚫 100% Ad-Free experience</li>
-            <li class="feature-yes">📱 Data usage cap alerts</li>
-          </ul>
-          <a href="https://play.google.com/store/apps/details?id=com.speedwatch.app"
-             id="pro-upgrade-btn"
-             class="pricing-btn pricing-btn--pro"
-             target="_blank" rel="noopener">Get Pro on Play Store →</a>
-        </div>
-
-        <div class="pricing-card pricing-card--free" id="pricing-lifetime">
-          <div class="pricing-header">
-            <h3>Lifetime Pass</h3>
-            <div class="pricing-price"><span class="price-amount">$39.99</span><span class="price-prefix">one-time</span></div>
-            <p>Pay once, own forever</p>
-          </div>
-          <ul class="pricing-features" aria-label="Lifetime features">
-            <li class="feature-yes">All Yearly Pro features</li>
-            <li class="feature-yes">Lifetime feature upgrades</li>
-            <li class="feature-yes">No recurring subscription</li>
-          </ul>
-          <a href="https://play.google.com/store/apps/details?id=com.speedwatch.app"
-             class="pricing-btn pricing-btn--outline"
-             target="_blank" rel="noopener">Buy Lifetime Pass</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== HOW IT WORKS ===== -->
-  <section class="section how" id="how" aria-labelledby="how-heading">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Quick Start</span>
-        <h2 id="how-heading">Up &amp; Running in<br/><span class="gradient-text">Under 60 Seconds</span></h2>
-      </div>
-
-      <div class="steps" role="list">
-        <div class="step" role="listitem" id="step-1">
-          <div class="step-number" aria-hidden="true">1</div>
-          <div class="step-content">
-            <h3>Install from Play Store</h3>
-            <p>Download SpeedWatch free from Google Play. Supports Android 7.0 and above (API 24+).</p>
+      <div class="faq-list">
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>How accurate is the SpeedWatch web speed test?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          <div class="faq-answer">
+            SpeedWatch measures raw HTTP chunk throughput directly against high-capacity global CDN edge servers without proxy compression, accurately measuring latency, download speed, and upload throughput matching real-world browsing, streaming, and gaming conditions.
           </div>
         </div>
-        <div class="step-connector" aria-hidden="true"></div>
-        <div class="step" role="listitem" id="step-2">
-          <div class="step-number" aria-hidden="true">2</div>
-          <div class="step-content">
-            <h3>Enter Your ISP Plan</h3>
-            <p>On first launch, tell SpeedWatch your contracted speed. It will track whether your ISP delivers it.</p>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How do I know if my ISP is throttling my internet speed?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          <div class="faq-answer">
+            ISP throttling commonly occurs during peak evening hours or on specific traffic types like video streaming and gaming. If your speed drops significantly below your contracted plan tier or fluctuates heavily, run diagnostic tests across different hours. The SpeedWatch Android app automates this with 24/7 background audits and official legal PDF dispute certificates.
           </div>
         </div>
-        <div class="step-connector" aria-hidden="true"></div>
-        <div class="step" role="listitem" id="step-3">
-          <div class="step-number" aria-hidden="true">3</div>
-          <div class="step-content">
-            <h3>Tap &amp; Test Anytime</h3>
-            <p>Hit "Start Speed Test" and watch the speedometer. View history, export reports, and run lab diagnostics.</p>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What is bufferbloat and how does it affect online gaming?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Bufferbloat occurs when your router queues excessive packets during active downloads or uploads, causing severe latency spikes (lag). Even with 500 Mbps download, high bufferbloat creates rubber-banding in competitive games and frozen video on Zoom calls.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Why is Wi-Fi speed slower than a wired Ethernet connection?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Wi-Fi is subject to radio frequency interference from neighboring routers, physical wall attenuation, and protocol overhead. Ethernet provides a dedicated full-duplex shielded copper connection, typically delivering 20% to 50% faster real throughput with near-zero packet loss.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What internet speed do I need for 4K streaming and gaming?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          <div class="faq-answer">
+            A single 4K HDR video stream requires 25 Mbps continuous bandwidth. For households with multiple screens, smart TVs, and remote workers, 100–300 Mbps is recommended. For gaming, ping latency under 30 ms and jitter under 3 ms matter much more than raw download speed.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can I use SpeedWatch audit reports to dispute my ISP bill?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Yes! The SpeedWatch Android app generates court-ready, timestamped, verified PDF SLA audit certificates proving contracted speed breaches, which users successfully submit to ISPs (Comcast, Spectrum, AT&T, Verizon) and regulatory bodies to claim monthly bill credits.
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ===== PRIVACY ===== -->
-  <section class="section privacy-section" id="privacy" aria-labelledby="privacy-heading">
-    <div class="container">
-      <div class="privacy-card">
-        <div class="privacy-icon" aria-hidden="true">
-          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M32 4L8 14v18c0 14 10 26 24 28 14-2 24-14 24-28V14L32 4z" stroke="url(#pgi)" stroke-width="2.5" fill="none"/>
-            <path d="M22 32l6 6 14-14" stroke="#4CAF50" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            <defs><linearGradient id="pgi" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse"><stop stop-color="#4CAF50"/><stop offset="1" stop-color="#00E5FF"/></linearGradient></defs>
-          </svg>
-        </div>
-        <div class="privacy-content">
-          <h2 id="privacy-heading">Your Data Stays on Your Device</h2>
-          <p>SpeedWatch stores all speed test history locally using Room database — nothing is uploaded to external servers. Network diagnostics use direct UDP/TCP connections only to measure your speed.</p>
-          <div class="privacy-points" role="list">
-            <div class="privacy-point" role="listitem">
-              <span class="pp-icon" aria-hidden="true">🔒</span>
-              <span>All history stored locally (Room DB)</span>
-            </div>
-            <div class="privacy-point" role="listitem">
-              <span class="pp-icon" aria-hidden="true">🚫</span>
-              <span>No personal data collected or sold</span>
-            </div>
-            <div class="privacy-point" role="listitem">
-              <span class="pp-icon" aria-hidden="true">📡</span>
-              <span>Network only used for speed testing</span>
-            </div>
-            <div class="privacy-point" role="listitem">
-              <span class="pp-icon" aria-hidden="true">📋</span>
-              <span>Full privacy policy linked below</span>
-            </div>
-          </div>
-          <a href="privacy.html" class="btn-ghost" id="read-privacy-policy" style="margin-top: 1.5rem; display: inline-flex;">Read Privacy Policy →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CTA BANNER ===== -->
-  <section class="section cta-banner" id="cta" aria-labelledby="cta-heading">
-    <div class="cta-bg-orbs" aria-hidden="true">
-      <div class="cta-orb cta-orb-1"></div>
-      <div class="cta-orb cta-orb-2"></div>
-    </div>
-    <div class="container cta-inner">
-      <h2 id="cta-heading">Stop Guessing.<br/><span class="gradient-text">Start Measuring.</span></h2>
-      <p>SpeedWatch is free to download. Know exactly what your ISP is delivering — right now.</p>
-      <a href="https://play.google.com/store/apps/details?id=com.speedwatch.app"
-         id="cta-play-btn"
-         class="btn-primary btn-primary--large"
-         target="_blank" rel="noopener"
-         aria-label="Download SpeedWatch on Google Play Store">
-        <img src="assets/google-play-badge.svg" alt="Get it on Google Play" class="play-badge play-badge--large" />
-      </a>
-      <p class="cta-note">Free · Android 7.0+ · No account required</p>
     </div>
   </section>
 
   <!-- ===== FOOTER ===== -->
-  <footer class="footer" role="contentinfo">
+  <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="assets/icon.png" alt="SpeedWatch logo" class="nav-logo" />
+        <img src="assets/icon.png" alt="SpeedWatch logo" style="width: 32px; height: 32px;" />
         <span class="nav-wordmark">SpeedWatch</span>
       </div>
-      <p class="footer-tagline">State-of-the-art network performance monitoring for Android.</p>
-      <nav class="footer-links" aria-label="Footer links">
-        <a href="privacy.html" id="footer-privacy">Privacy Policy</a>
-        <a href="terms.html" id="footer-terms">Terms of Service</a>
-        <a href="mailto:cartoonworld7sb@gmail.com" id="footer-support">Support</a>
-        <a href="https://play.google.com/store/apps/details?id=com.speedwatch.app" target="_blank" rel="noopener" id="footer-playstore">Google Play</a>
-      </nav>
-      <p class="footer-copy">&copy; 2026 SpeedWatch. All rights reserved. Package: <code>com.speedwatch.app</code></p>
+      <p class="footer-tagline">
+        Precision Network Performance Intelligence &amp; 24/7 SLA Auditing.
+      </p>
+      <div class="footer-links">
+        <a href="#speedtest">Speed Test</a>
+        <a href="/blog/">Blog &amp; Guides</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="https://play.google.com/store/apps/details?id=com.speedwatch.app" target="_blank" rel="noopener">Google Play Store</a>
+      </div>
+      <p class="footer-copy">
+        &copy; 2026 SpeedWatch. Built for performance and privacy.
+      </p>
     </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>

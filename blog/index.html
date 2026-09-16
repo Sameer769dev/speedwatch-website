@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpeedWatch Blog – Broadband Guides, ISP Throttling &amp; Latency Fixes</title>
+  <meta name="description"
+    content="Authoritative engineering guides on internet speed testing, ISP throttling detection, router bufferbloat fixes, and how to dispute slow speeds with certified SLA evidence." />
+  <link rel="canonical" href="https://speedwatch-app.vercel.app/blog/" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SpeedWatch Blog – Network Performance Guides" />
+  <meta property="og:description"
+    content="Authoritative broadband guides on speed testing, ISP throttling, bufferbloat, and Wi-Fi vs Ethernet." />
+  <meta property="og:image" content="https://speedwatch-app.vercel.app/assets/icon.png" />
+  <meta property="og:url" content="https://speedwatch-app.vercel.app/blog/" />
+  
+  <link rel="icon" href="../assets/icon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://speedwatch-app.vercel.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://speedwatch-app.vercel.app/blog/"
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand" aria-label="SpeedWatch Home">
+        <img src="../assets/icon.png" alt="SpeedWatch logo" class="nav-logo" />
+        <span class="nav-wordmark">SpeedWatch</span>
+      </a>
+      <ul class="nav-links" role="navigation" aria-label="Main navigation">
+        <li><a href="/#speedtest">Speed Test</a></li>
+        <li><a href="/#features">Features</a></li>
+        <li><a href="/blog/" style="color: var(--cyan);">Blog &amp; Guides</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+      <a href="https://play.google.com/store/apps/details?id=com.speedwatch.app" class="btn-nav-cta" target="_blank" rel="noopener">
+        Get on Play Store
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <a href="/#speedtest">Speed Test</a>
+      <a href="/#features">Features</a>
+      <a href="/blog/">Blog &amp; Guides</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="https://play.google.com/store/apps/details?id=com.speedwatch.app" target="_blank" rel="noopener"
+        class="mobile-cta">Download App</a>
+    </div>
+  </nav>
+
+  <!-- ===== ADSENSE LEADERBOARD ===== -->
+  <div class="container" style="padding-top: calc(var(--nav-h) + 16px);">
+    <div class="ad-slot-container">
+      <div class="ad-label">Advertisement</div>
+      <div class="ad-box ad-leaderboard">
+        <span>Sponsored Ad Placement Space</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BLOG HERO ===== -->
+  <header class="blog-hero">
+    <div class="container">
+      <span class="blog-card-tag">Engineering Insights</span>
+      <h1 style="font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 800; margin: 12px 0 16px;">
+        SpeedWatch <span class="gradient-text">Network Intelligence</span> Blog
+      </h1>
+      <p style="max-width: 680px; margin: 0 auto; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.6;">
+        In-depth technical guides, router optimization tutorials, and legal strategies to verify and protect your internet speeds.
+      </p>
+    </div>
+  </header>
+
+  <!-- ===== BLOG ARTICLES GRID ===== -->
+  <main class="container">
+    <div class="blog-grid">
+
+      <!-- Article 1 -->
+      <article class="blog-card">
+        <div class="blog-card-body">
+          <span class="blog-card-tag">Speed Testing</span>
+          <h2 class="blog-card-title">
+            <a href="how-to-test-internet-speed-accurately.html">How to Test Internet Speed Accurately (The Definitive Guide)</a>
+          </h2>
+          <p class="blog-card-excerpt">
+            Why do different speed tests give conflicting results? Learn the difference between single and multi-stream benchmarks, Wi-Fi interference factors, and how to test raw line capacity.
+          </p>
+          <div class="blog-card-meta">
+            <span>By SpeedWatch Labs · 8 min read</span>
+            <a href="how-to-test-internet-speed-accurately.html" style="color: var(--cyan); font-weight: 600;">Read Guide →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 2 -->
+      <article class="blog-card">
+        <div class="blog-card-body">
+          <span class="blog-card-tag">ISP Throttling</span>
+          <h2 class="blog-card-title">
+            <a href="how-to-detect-isp-throttling.html">How to Prove Your ISP Is Throttling You (And Claim Refunds)</a>
+          </h2>
+          <p class="blog-card-excerpt">
+            Does your internet crawl every evening at 8 PM? Discover how ISPs perform traffic shaping on Netflix and YouTube, and how to gather timestamped SLA evidence to demand bill credits.
+          </p>
+          <div class="blog-card-meta">
+            <span>By SpeedWatch Labs · 7 min read</span>
+            <a href="how-to-detect-isp-throttling.html" style="color: var(--cyan); font-weight: 600;">Read Guide →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 3 -->
+      <article class="blog-card">
+        <div class="blog-card-body">
+          <span class="blog-card-tag">Latency &amp; Gaming</span>
+          <h2 class="blog-card-title">
+            <a href="what-is-bufferbloat-how-to-fix.html">What is Bufferbloat? Why Fast Internet Still Lags in Games</a>
+          </h2>
+          <p class="blog-card-excerpt">
+            Why do you get ping spikes and rubber-banding in competitive multiplayer games even on a 1 Gbps fiber connection? Learn how queue delay ruins latency and how SQM router algorithms fix it.
+          </p>
+          <div class="blog-card-meta">
+            <span>By SpeedWatch Labs · 9 min read</span>
+            <a href="what-is-bufferbloat-how-to-fix.html" style="color: var(--cyan); font-weight: 600;">Read Guide →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 4 -->
+      <article class="blog-card">
+        <div class="blog-card-body">
+          <span class="blog-card-tag">Hardware &amp; Wi-Fi</span>
+          <h2 class="blog-card-title">
+            <a href="wifi-vs-ethernet-speed-comparison.html">Wi-Fi vs. Ethernet: Why Your Wireless Speed Is Half Your Contract</a>
+          </h2>
+          <p class="blog-card-excerpt">
+            A comprehensive breakdown of radio attenuation, 2.4 GHz vs 5 GHz vs 6 GHz frequency spectrums, half-duplex limitations, and when upgrading to Cat6 cables actually matters.
+          </p>
+          <div class="blog-card-meta">
+            <span>By SpeedWatch Labs · 6 min read</span>
+            <a href="wifi-vs-ethernet-speed-comparison.html" style="color: var(--cyan); font-weight: 600;">Read Guide →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 5 -->
+      <article class="blog-card">
+        <div class="blog-card-body">
+          <span class="blog-card-tag">Legal &amp; Contracts</span>
+          <h2 class="blog-card-title">
+            <a href="how-to-dispute-isp-bill-slow-speeds.html">How to Legally Dispute Slow Speeds with Certified SLA Evidence</a>
+          </h2>
+          <p class="blog-card-excerpt">
+            A step-by-step consumer playbook for getting refunds from Comcast, Spectrum, AT&amp;T, and Verizon by submitting official timestamped SLA dispute PDF reports and FCC complaints.
+          </p>
+          <div class="blog-card-meta">
+            <span>By SpeedWatch Labs · 10 min read</span>
+            <a href="how-to-dispute-isp-bill-slow-speeds.html" style="color: var(--cyan); font-weight: 600;">Read Guide →</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- App Conversion Box inside Blog Hub -->
+    <div class="app-conversion-box" style="margin-bottom: 80px;">
+      <div class="app-conversion-content">
+        <h4>⚡ Audit Your Network 24/7 on Android</h4>
+        <p>
+          Get real-time status bar speed monitoring, continuous background SLA audits, and instant court-ready PDF certificates on your phone.
+        </p>
+      </div>
+      <div class="app-conversion-cta">
+        <a href="https://play.google.com/store/apps/details?id=com.speedwatch.app" class="btn-primary" target="_blank" rel="noopener">
+          Download Free App →
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="../assets/icon.png" alt="SpeedWatch logo" style="width: 32px; height: 32px;" />
+        <span class="nav-wordmark">SpeedWatch</span>
+      </div>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/#speedtest">Speed Test</a>
+        <a href="/blog/">Blog</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 SpeedWatch. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>

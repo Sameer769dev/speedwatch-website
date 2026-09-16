@@ -1,0 +1,8 @@
+# Robots.txt for SpeedWatch Web Platform
+# https://speedwatch-app.vercel.app/
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://speedwatch-app.vercel.app/sitemap.xml
